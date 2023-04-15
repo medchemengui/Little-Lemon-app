@@ -1,30 +1,39 @@
-import { View, Text } from 'react-native'
-
+import {  Text, ScrollView, StyleSheet } from 'react-native'
+import * as React from 'react';
 
 export default function WelcomeScreen() {
   return (
-    <View style={{ flex: 1 }}>
+    
+    <ScrollView style={styles.container}>
     <Text
-      style={{
-        padding: 40,
-        fontSize: 30,
-        color: 'white',
-        textAlign: 'center',
-      }}>
+      style={styles.headerText}>
       Welcome to Little Lemon
     </Text>
     <Text
-      style={{
-        fontSize: 24,
-        padding: 20,
-        marginVertical: 8,
-        color: 'white',
-        textAlign: 'center',
-      }}>
+      style={styles.innerText}>
       Little Lemon is a charming neighborhood bistro that serves simple food
       and classic cocktails in a lively but casual environment. We would love
       to hear your experience with us!
     </Text>
-  </View>
-  )
+    </ScrollView>
+    )
 }
+
+const styles = StyleSheet.create({
+  container :{
+    flex: 1
+  },
+  headerText:{
+    padding: 40,
+    fontSize: 30,
+    color: '#EDEFEE',
+    textAlign: 'center',
+  },
+  innerText:{
+    fontSize: 24,
+    padding: 20,
+    marginVertical: 8,
+    color: '#EDEFEE',
+    textAlign: 'center',
+  }
+})
